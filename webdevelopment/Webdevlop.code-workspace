@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Webdevlop",
+			"path": ".."
+		},
+		{
+			"name": "webdev",
+			"path": "../../webdev"
+		}
+	],
+	"settings": {}
+}

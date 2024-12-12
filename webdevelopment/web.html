@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnavi's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .nav-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-bar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .sub-links {
+            display: none;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .sub-links.active {
+            display: block;
+        }
+
+        .sub-links li {
+            margin-bottom: 10px;
+        }
+
+        .sub-links li a {
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .sub-links li a:hover {
+            text-decoration: underline;
+        }
+
+        .date {
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vaishnavi's Website</h1>
+
+    <div class="nav-bar">
+        <a href="#" onclick="showCategory('ai')">Artificial Intelligence</a>
+        <a href="#" onclick="showCategory('cryptocurrency')">Cryptocurrency</a>
+        <a href="#" onclick="showCategory('Types Of Renewable Resources')">Types Of Renewable Resources</a>
+        <a href="#" onclick="showCategory('general')">General</a>
+    </div>
+
+    <div class="content">
+        <ul id="ai" class="sub-links">
+            <li><span class="date">2024 Dec 03</span> <a href="machinelearn.html">About Machine Learning</a></li>
+            <li><span class="date">2024 Nov 15</span> <a href="vision.html">About Vision in AI</a></li>
+            <li><span class="date">2024 Oct 25</span> <a href="ethics.html">About Ethics in AI</a></li>
+        </ul>
+
+        <ul id="cryptocurrency" class="sub-links">
+            <li><span class="date">2024 Dec 01</span> <a href="whatiscryptocurrency.html">What is Cryptocurrency?</a></li>
+            <li><span class="date">2024 Nov 09</span> <a href="blockchain.html">About Blockchain Technology</a></li>
+            <li><span class="date">2024 Oct 29</span> <a href="popularcryptocurrency.html">Popular Cryptocurrencies</a></li>
+        </ul>
+
+        <ul id="Types Of Renewable Resources" class="sub-links">
+            <li><span class="date">2024 Dec 10</span> <a href="solar.html">About Solar Energy</a></li>
+            <li><span class="date">2024 Nov 20</span> <a href="wind.html">About Wind Energy
+            </a></li>
+            <li><span class="date">2024 Dec 23</span><a href="hydropower.html">About Hydropower</a></li>
+        </ul>
+
+        <ul id="general" class="sub-links">
+            <li><span class="date">2024 Dec 05</span> <a href="generalnews.html">General Updates and News</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function showCategory(categoryId) {
+            const allCategories = document.querySelectorAll('.sub-links');
+            allCategories.forEach(category => category.classList.remove('active'));
+            const selectedCategory = document.getElementById(categoryId);
+            if (selectedCategory) {
+                selectedCategory.classList.add('active');
+            }
+        }
+
+        document.getElementById('ai').classList.add('active');
+    </script>
+</body>
+</html>
